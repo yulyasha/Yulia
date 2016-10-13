@@ -1,0 +1,38 @@
+==============================================================================
+20161011 11:00:44.224 - INFO - + START SUITE: Select From Dna [ ]
+==============================================================================
+20161011 11:00:44.224 - INFO - +- START SETUP: mysql_keywords.Connect to mySQL [ ]
+20161011 11:00:44.225 - INFO - +-- START KW: DatabaseLibrary.Connect To Database Using Custom Params [ pymysql | db='${db_name}', user='${db_user}', host='${db_host}', port=${db_port} ]
+20161011 11:00:44.488 - INFO - +-- END KW: DatabaseLibrary.Connect To Database Using Custom Params (263)
+20161011 11:00:44.488 - INFO - +- END SETUP: mysql_keywords.Connect to mySQL (264)
+------------------------------------------------------------------------------
+20161011 11:00:44.491 - INFO - +- START TEST: Select dna [ ]
+------------------------------------------------------------------------------
+20161011 11:00:44.492 - INFO - +-- START KW: ${desc} = DatabaseLibrary.Query [ SELECT description FROM aedes_aegypti_core_55_1d.xref where xref_id=506; ]
+20161011 11:00:44.492 - DEBUG - Executing : SELECT description FROM aedes_aegypti_core_55_1d.xref where xref_id=506;
+20161011 11:00:44.615 - INFO - ${desc} = [('Phosphoglycerate kinase.',)]
+20161011 11:00:44.616 - INFO - +-- END KW: ${desc} = DatabaseLibrary.Query (124)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20161011 11:00:44.617 - INFO - +-- START KW: BuiltIn.Should Contain [ ${desc}[0] | Phosphoglycerate kinase. ]
+20161011 11:00:44.618 - INFO - +-- END KW: BuiltIn.Should Contain (1)
+------------------------------------------------------------------------------
+20161011 11:00:44.630 - INFO - +- END TEST: Select dna (130)
+------------------------------------------------------------------------------
+20161011 11:00:44.634 - INFO - +- START TEST: Table qtl Must Exist [ ]
+------------------------------------------------------------------------------
+20161011 11:00:44.634 - INFO - +-- START KW: DatabaseLibrary.Table Must Exist [ qtl ]
+20161011 11:00:44.634 - DEBUG - Executing : select * from information_schema.tables where table_name='qtl'
+20161011 11:00:46.873 - INFO - +-- END KW: DatabaseLibrary.Table Must Exist (2238)
+------------------------------------------------------------------------------
+20161011 11:00:46.883 - INFO - +- END TEST: Table qtl Must Exist (2244)
+------------------------------------------------------------------------------
+20161011 11:00:46.888 - INFO - +- START TEST: Row Count Is Equal To 34 [ ]
+------------------------------------------------------------------------------
+20161011 11:00:46.889 - INFO - +-- START KW: DatabaseLibrary.Row Count Is Equal To X [ SELECT description FROM aedes_aegypti_core_55_1d.xref where external_db_id=2200 | 34 ]
+20161011 11:00:46.889 - DEBUG - Executing : SELECT description FROM aedes_aegypti_core_55_1d.xref where external_db_id=2200
+20161011 11:00:47.017 - INFO - +-- END KW: DatabaseLibrary.Row Count Is Equal To X (128)
+------------------------------------------------------------------------------
+20161011 11:00:47.029 - INFO - +- END TEST: Row Count Is Equal To 34 (134)
+------------------------------------------------------------------------------
+20161011 11:00:47.044 - INFO - + END SUITE: Select From Dna (2989)
+==============================================================================

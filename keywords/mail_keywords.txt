@@ -1,0 +1,35 @@
+***Settings***
+Resource  ../libs.txt
+
+***Keywords***
+Open Browser for Micecloud
+  [Arguments]  ${mail_box}  ${password}
+  Wait Until Keyword Succeeds  10 sec  1 sec  Open Mailbox  server=${IMAP_MAIL_SERVER}  user=${mail_box}  password=${password}  is_secure=${True}
+  ${latest}=  Wait for Email  poll_frequency=5  status=UNSEEN  timeout=20
+  [Return]  ${latest}
+
+Get Last Unread Email Message
+  [Arguments]  ${mail_box}  ${password}
+  Wait Until Keyword Succeeds  10 sec  1 sec  Open Mailbox  server=${IMAP_MAIL_SERVER}  user=${mail_box}  password=${password}  is_secure=${True}
+  ${latest}=  Wait for Email  poll_frequency=5  status=UNSEEN  timeout=20
+  [Return]  ${latest}
+
+Mail Preconditions
+  [Arguments]  ${mail_box}  ${password}
+  Open Mailbox  server=${IMAP_MAIL_SERVER}  user=${mail_box}  password=${password}  is_secure=${True}
+  Mark All Emails As Read
+  Close Mailbox
+  
+Verify Last Unread Email Message Header
+  [Arguments]  ${mail_box}  ${password}  ${type}  ${text}
+  ${latest}=  Get Last Unread Email Message
+  Walk Multipart Email  ${latest}
+  ${data}=  Get Multipart Field Names  ${type}
+  Should Be Equal  ${data}  ${text} 
+
+Verify Last Unread Email Message Text 
+  [Arguments]  ${mail_box}  ${password}  ${text}
+  ${latest}=  Get Last Unread Email Message  ${mail_box}  ${password}
+  ${match}=  Get Matches From Email  ${latest}  ${text}
+  Should Not Be Empty  ${match}
+

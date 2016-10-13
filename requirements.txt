@@ -1,0 +1,5 @@
+robotframework==2.8.6
+robotframework-selenium2library==1.6.0
+robotframework-imaplibrary==0.2.3
+PyMySQL==0.6
+robotframework-databaselibrary==0.6

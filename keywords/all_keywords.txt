@@ -1,0 +1,4 @@
+***Settings***
+Resource  ui_keywords.txt
+Resource  mail_keywords.txt
+Resource  mysql_keywords.txt

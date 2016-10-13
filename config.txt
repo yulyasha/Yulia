@@ -1,0 +1,14 @@
+***Settings***
+Resource  pages/all_pages.txt
+Resource  keywords/all_keywords.txt
+
+
+***Variables***
+${HOME_URL}  https://micebooking.com
+${BROWSER}  gc
+${IMAP_MAIL_SERVER}  imap.gmail.com
+${db_name}  aedes_aegypti_core_55_1d
+${db_user}  anonymous
+${db_host}  ensembldb.ensembl.org
+${db_pwd}  
+${db_port}  3306

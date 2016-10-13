@@ -1,0 +1,15 @@
+***Settings***
+Resource  ../libs.txt
+
+***Variables***
+${hp_btn_login}  xpath=//a[@href="#sign-in"]
+${hp_btn_signup}  xpath=//a[@href="/accounts/register/"]
+${hp_btn_reset_pwd}  xpath=//a[@href="/accounts/password/reset/"]
+
+***Keywords***
+Click Login Button On Header Page
+  Click Element  ${hp_btn_login}
+Click Sign Up Button On Header Page
+  Click Element  ${hp_btn_signup}
+Click Reset Password Button On Header Page
+  Click Element  ${hp_btn_reset_pwd}

@@ -1,0 +1,15 @@
+***Settings***
+Documentation  This file represents Database
+Resource  ../config.txt
+Suite Setup  Connect to mySQL  
+***Test Case***
+Select dna
+  ${desc}  Query  SELECT description FROM aedes_aegypti_core_55_1d.xref where xref_id=506;
+  Should Contain  ${desc}[0]  Phosphoglycerate kinase.
+ 
+
+Table qtl Must Exist
+   Table Must Exist  qtl
+
+Row Count Is Equal To 34
+  Row Count Is Equal To X  SELECT description FROM aedes_aegypti_core_55_1d.xref where external_db_id=2200  34

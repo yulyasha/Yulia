@@ -1,0 +1,30 @@
+***Settings***
+Documentation  This file represents Registration on our web-site
+Resource  ../config.txt
+Test Setup  Preconditions  
+Test Teardown  Close All Browsers
+
+***Keywords***
+Preconditions  
+  Open Browser for Micebooking  ${HOME_URL}  ${BROWSER}
+  ${NUMBER}=  Evaluate  random.randint(1,1000)  random
+  Set Suite Variable  ${NUMBER}  ${NUMBER}
+  Mail Preconditions  scaletoolstest@gmail.com  scaletoolstest123
+  
+***Test Case***
+Sucessful\Registration Message
+  Click Sign Up Button On Header Page
+  Select Salutation On Registration Page  Mrs
+  Input First Name On Registration Page  Yulia
+  Input Last Name On Registration Page  Eryomina
+  Input Email On Registration Page  scaletoolstest+${NUMBER}@gmail.com
+  Input Email Repeat On Registration Page  scaletoolstest+${NUMBER}@gmail.com
+  Input Company On Registration Page  Company
+  Input Department On Registration Page  Department
+  Input Password On Registration Page  scaletoolstest123
+  Input Confirm Password On Registration Page  scaletoolstest123
+  Select Confirm Checkbox
+  Click Submit On Registration Page
+  Verify Last Unread Email Message Text  scaletoolstest@gmail.com  scaletoolstest123  Yulia Eryomina!
+
+

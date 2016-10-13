@@ -1,0 +1,9 @@
+***Settings***
+library  DatabaseLibrary
+library  Selenium2Library   timeout=10  implicit_wait=10  run_on_failure=Take Screenshot
+library  BuiltIn
+library  ImapLibrary
+
+***Keyword***
+Take Screenshot
+  Capture Page Screenshot  ${TEST NAME}.png

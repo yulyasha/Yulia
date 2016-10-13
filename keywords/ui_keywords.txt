@@ -1,0 +1,8 @@
+***Settings***
+Resource  ../libs.txt
+***Keywords***
+Open Browser for Micebooking
+  [arguments]  ${url}  ${browser}
+  Open Browser  ${url}  ${browser}
+  Maximize Browser Window
+  Set Selenium Speed  .2

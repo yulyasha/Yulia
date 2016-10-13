@@ -1,0 +1,4 @@
+***Settings***
+Resource  header_page.txt
+Resource  pwd_recovery_page.txt
+Resource  registration_page.txt

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20161011 11:00:44.040" generator="Robot 2.8.6 (Python 2.7.12 on win32)">
+<suite source="Y:\Automated testing\MiceBookingTests\test_cases\select_from_dna.txt" id="s1" name="Select From Dna">
+<kw type="setup" name="mysql_keywords.Connect to mySQL">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="DatabaseLibrary.Connect To Database Using Custom Params">
+<doc>Loads the DB API 2.0 module given `dbapiModuleName` then uses it to </doc>
+<arguments>
+<arg>pymysql</arg>
+<arg>db='${db_name}', user='${db_user}', host='${db_host}', port=${db_port}</arg>
+</arguments>
+<status status="PASS" endtime="20161011 11:00:44.488" starttime="20161011 11:00:44.225"></status>
+</kw>
+<status status="PASS" endtime="20161011 11:00:44.488" starttime="20161011 11:00:44.224"></status>
+</kw>
+<test id="s1-t1" name="Select dna">
+<kw type="kw" name="${desc} = DatabaseLibrary.Query">
+<doc>Uses the input `selectStatement` to query for the values that </doc>
+<arguments>
+<arg>SELECT description FROM aedes_aegypti_core_55_1d.xref where xref_id=506;</arg>
+</arguments>
+<msg timestamp="20161011 11:00:44.615" level="INFO">${desc} = [('Phosphoglycerate kinase.',)]</msg>
+<status status="PASS" endtime="20161011 11:00:44.615" starttime="20161011 11:00:44.491"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Contain">
+<doc>Fails if `item1` does not contain `item2` one or more times.</doc>
+<arguments>
+<arg>${desc}[0]</arg>
+<arg>Phosphoglycerate kinase.</arg>
+</arguments>
+<status status="PASS" endtime="20161011 11:00:44.618" starttime="20161011 11:00:44.617"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20161011 11:00:44.619" critical="yes" starttime="20161011 11:00:44.489"></status>
+</test>
+<test id="s1-t2" name="Table qtl Must Exist">
+<kw type="kw" name="DatabaseLibrary.Table Must Exist">
+<doc>Check if the table given exists in the database.</doc>
+<arguments>
+<arg>qtl</arg>
+</arguments>
+<status status="PASS" endtime="20161011 11:00:46.872" starttime="20161011 11:00:44.634"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20161011 11:00:46.874" critical="yes" starttime="20161011 11:00:44.630"></status>
+</test>
+<test id="s1-t3" name="Row Count Is Equal To 34">
+<kw type="kw" name="DatabaseLibrary.Row Count Is Equal To X">
+<doc>Check if the number of rows returned from `selectStatement` is equal to</doc>
+<arguments>
+<arg>SELECT description FROM aedes_aegypti_core_55_1d.xref where external_db_id=2200</arg>
+<arg>34</arg>
+</arguments>
+<status status="PASS" endtime="20161011 11:00:47.016" starttime="20161011 11:00:46.888"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20161011 11:00:47.018" critical="yes" starttime="20161011 11:00:46.884"></status>
+</test>
+<doc>This file represents Database</doc>
+<metadata>
+</metadata>
+<status status="PASS" endtime="20161011 11:00:47.030" starttime="20161011 11:00:44.041"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="3">Critical Tests</stat>
+<stat fail="0" pass="3">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" pass="3" id="s1" name="Select From Dna">Select From Dna</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

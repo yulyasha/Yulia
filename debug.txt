@@ -1,0 +1,131 @@
+==============================================================================
+20161006 10:06:50.775 - INFO - + START SUITE: Registration [ ]
+==============================================================================
+20161006 10:06:50.777 - INFO - +- START TEST: Sucessful\Registration Message [ ]
+------------------------------------------------------------------------------
+20161006 10:06:50.777 - INFO - +-- START SETUP: Preconditions [ ]
+20161006 10:06:50.778 - INFO - +--- START KW: ui_keywords.Open Browser for Micebooking [ ${HOME_URL} | ${BROWSER} ]
+20161006 10:06:50.779 - INFO - +---- START KW: Selenium2Library.Open Browser [ ${url} | ${browser} ]
+20161006 10:06:50.779 - INFO - Opening browser 'gc' to base url 'https://micebooking.com/'
+20161006 10:06:58.877 - DEBUG - Opened browser with session id f2cdfab86c6e8a4f28ca55e98f023246
+20161006 10:06:58.878 - INFO - +---- END KW: Selenium2Library.Open Browser (8099)
+20161006 10:06:58.878 - INFO - +---- START KW: Selenium2Library.Maximize Browser Window [ ]
+20161006 10:07:00.084 - INFO - +---- END KW: Selenium2Library.Maximize Browser Window (1206)
+20161006 10:07:00.085 - INFO - +---- START KW: Selenium2Library.Set Selenium Speed [ .2 ]
+20161006 10:07:00.085 - INFO - +---- END KW: Selenium2Library.Set Selenium Speed (0)
+20161006 10:07:00.086 - INFO - +--- END KW: ui_keywords.Open Browser for Micebooking (9308)
+20161006 10:07:00.086 - INFO - +--- START KW: ${NUMBER} = BuiltIn.Evaluate [ random.randint(1,1000) | random ]
+20161006 10:07:00.087 - INFO - ${NUMBER} = 721
+20161006 10:07:00.087 - INFO - +--- END KW: ${NUMBER} = BuiltIn.Evaluate (0)
+20161006 10:07:00.087 - INFO - +--- START KW: BuiltIn.Set Suite Variable [ ${NUMBER} | ${NUMBER} ]
+20161006 10:07:00.087 - INFO - ${NUMBER} = 721
+20161006 10:07:00.087 - INFO - +--- END KW: BuiltIn.Set Suite Variable (0)
+20161006 10:07:00.088 - INFO - +--- START KW: mail_keywords.Mail Preconditions [ scaletoolstest@gmail.com | scaletoolstest123 ]
+20161006 10:07:00.089 - INFO - +---- START KW: ImapLibrary.Open Mailbox [ server=${IMAP_MAIL_SERVER} | user=${mail_box} | password=${password} | is_secure=${True} ]
+20161006 10:07:01.933 - INFO - +---- END KW: ImapLibrary.Open Mailbox (1844)
+20161006 10:07:01.934 - INFO - +---- START KW: ImapLibrary.Mark All Emails As Read [ ]
+20161006 10:07:01.934 - INFO - +---- END KW: ImapLibrary.Mark All Emails As Read (1)
+20161006 10:07:01.935 - INFO - +---- START KW: ImapLibrary.Close Mailbox [ ]
+20161006 10:07:02.106 - INFO - +---- END KW: ImapLibrary.Close Mailbox (170)
+20161006 10:07:02.107 - INFO - +--- END KW: mail_keywords.Mail Preconditions (2019)
+20161006 10:07:02.110 - INFO - +-- END SETUP: Preconditions (11330)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20161006 10:07:02.111 - INFO - +-- START KW: header_page.Click Sign Up Button On Header Page [ ]
+20161006 10:07:02.114 - INFO - +--- START KW: Selenium2Library.Click Element [ ${hp_btn_signup} ]
+20161006 10:07:02.115 - INFO - Clicking element 'xpath=//a[@href="/accounts/register/"]'.
+20161006 10:07:04.145 - INFO - +--- END KW: Selenium2Library.Click Element (2031)
+20161006 10:07:04.151 - INFO - +-- END KW: header_page.Click Sign Up Button On Header Page (2035)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20161006 10:07:04.153 - INFO - +-- START KW: registration_page.Select Salutation On Registration Page [ Mrs ]
+20161006 10:07:04.157 - INFO - +--- START KW: Selenium2Library.Select From List By Label [ id=id_title | ${title} ]
+20161006 10:07:04.158 - INFO - Selecting label(s) 'Mrs' from list 'id=id_title'.
+20161006 10:07:05.826 - INFO - +--- END KW: Selenium2Library.Select From List By Label (1670)
+20161006 10:07:05.827 - INFO - +-- END KW: registration_page.Select Salutation On Registration Page (1675)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20161006 10:07:05.828 - INFO - +-- START KW: registration_page.Input First Name On Registration Page [ Yulia ]
+20161006 10:07:05.831 - INFO - +--- START KW: Selenium2Library.Input Text [ ${rp_inpt_first_name} | ${text} ]
+20161006 10:07:05.831 - INFO - Typing text 'Yulia' into text field 'xpath=.//*[@id='id_first_name']'
+20161006 10:07:06.702 - INFO - +--- END KW: Selenium2Library.Input Text (871)
+20161006 10:07:06.703 - INFO - +-- END KW: registration_page.Input First Name On Registration Page (874)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20161006 10:07:06.704 - INFO - +-- START KW: registration_page.Input Last Name On Registration Page [ Eryomina ]
+20161006 10:07:06.707 - INFO - +--- START KW: Selenium2Library.Input Text [ ${rp_inpt_last_name} | ${text} ]
+20161006 10:07:06.707 - INFO - Typing text 'Eryomina' into text field 'xpath=.//*[@id='id_last_name']'
+20161006 10:07:07.588 - INFO - +--- END KW: Selenium2Library.Input Text (882)
+20161006 10:07:07.589 - INFO - +-- END KW: registration_page.Input Last Name On Registration Page (884)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20161006 10:07:07.590 - INFO - +-- START KW: registration_page.Input Email On Registration Page [ scaletoolstest+${NUMBER}@gmail.com ]
+20161006 10:07:07.593 - INFO - +--- START KW: Selenium2Library.Input Text [ ${rp_inpt_email} | ${text} ]
+20161006 10:07:07.593 - INFO - Typing text 'scaletoolstest+721@gmail.com' into text field 'xpath=.//*[@id='id_email']'
+20161006 10:07:08.517 - INFO - +--- END KW: Selenium2Library.Input Text (924)
+20161006 10:07:08.519 - INFO - +-- END KW: registration_page.Input Email On Registration Page (929)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20161006 10:07:08.520 - INFO - +-- START KW: registration_page.Input Email Repeat On Registration Page [ scaletoolstest+${NUMBER}@gmail.com ]
+20161006 10:07:08.523 - INFO - +--- START KW: Selenium2Library.Input Text [ ${rp_inpt_email_rpt} | ${text} ]
+20161006 10:07:08.524 - INFO - Typing text 'scaletoolstest+721@gmail.com' into text field 'xpath=.//*[@id='id_email2']'
+20161006 10:07:09.409 - INFO - +--- END KW: Selenium2Library.Input Text (885)
+20161006 10:07:09.410 - INFO - +-- END KW: registration_page.Input Email Repeat On Registration Page (890)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20161006 10:07:09.411 - INFO - +-- START KW: registration_page.Input Company On Registration Page [ Company ]
+20161006 10:07:09.413 - INFO - +--- START KW: Selenium2Library.Input Text [ ${rp_inpt_copmany} | ${text} ]
+20161006 10:07:09.414 - INFO - Typing text 'Company' into text field 'xpath=.//*[@id='id_company']'
+20161006 10:07:10.257 - INFO - +--- END KW: Selenium2Library.Input Text (844)
+20161006 10:07:10.259 - INFO - +-- END KW: registration_page.Input Company On Registration Page (847)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20161006 10:07:10.260 - INFO - +-- START KW: registration_page.Input Department On Registration Page [ Department ]
+20161006 10:07:10.263 - INFO - +--- START KW: Selenium2Library.Input Text [ ${rp_inpt_department} | ${text} ]
+20161006 10:07:10.263 - INFO - Typing text 'Department' into text field 'xpath=.//*[@id='id_department']'
+20161006 10:07:11.148 - INFO - +--- END KW: Selenium2Library.Input Text (885)
+20161006 10:07:11.154 - INFO - +-- END KW: registration_page.Input Department On Registration Page (889)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20161006 10:07:11.155 - INFO - +-- START KW: registration_page.Input Password On Registration Page [ scaletoolstest123 ]
+20161006 10:07:11.157 - INFO - +--- START KW: Selenium2Library.Input Text [ ${rp_inpt_pwd} | ${text} ]
+20161006 10:07:11.158 - INFO - Typing text 'scaletoolstest123' into text field 'xpath=.//*[@id='id_password1']'
+20161006 10:07:12.017 - INFO - +--- END KW: Selenium2Library.Input Text (859)
+20161006 10:07:12.018 - INFO - +-- END KW: registration_page.Input Password On Registration Page (862)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20161006 10:07:12.020 - INFO - +-- START KW: registration_page.Input Confirm Password On Registration Page [ scaletoolstest123 ]
+20161006 10:07:12.022 - INFO - +--- START KW: Selenium2Library.Input Text [ ${rp_inpt_pwd_rp} | ${text} ]
+20161006 10:07:12.022 - INFO - Typing text 'scaletoolstest123' into text field 'xpath=.//*[@id='id_password2']'
+20161006 10:07:12.880 - INFO - +--- END KW: Selenium2Library.Input Text (858)
+20161006 10:07:12.881 - INFO - +-- END KW: registration_page.Input Confirm Password On Registration Page (861)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20161006 10:07:12.882 - INFO - +-- START KW: registration_page.Select Confirm Checkbox [ ]
+20161006 10:07:12.884 - INFO - +--- START KW: Selenium2Library.Click Element [ ${rp_terms_and_cond} ]
+20161006 10:07:12.885 - INFO - Clicking element 'xpath=//input[@id='id_terms']/..'.
+20161006 10:07:13.455 - INFO - +--- END KW: Selenium2Library.Click Element (570)
+20161006 10:07:13.457 - INFO - +-- END KW: registration_page.Select Confirm Checkbox (574)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20161006 10:07:13.458 - INFO - +-- START KW: registration_page.Click Submit On Registration Page [ ]
+20161006 10:07:13.460 - INFO - +--- START KW: Selenium2Library.Click Element [ ${rp_submit} ]
+20161006 10:07:13.460 - INFO - Clicking element 'xpath=.//*[@id='btn_go_signup']'.
+20161006 10:07:15.049 - INFO - +--- END KW: Selenium2Library.Click Element (1590)
+20161006 10:07:15.051 - INFO - +-- END KW: registration_page.Click Submit On Registration Page (1593)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20161006 10:07:15.053 - INFO - +-- START KW: mail_keywords.Verify Last Unread Email Message Text [ scaletoolstest@gmail.com | scaletoolstest123 | Yulia Eryomina! ]
+20161006 10:07:15.057 - INFO - +--- START KW: ${latest} = mail_keywords.Get Last Unread Email Message [ ${mail_box} | ${password} ]
+20161006 10:07:15.061 - INFO - +---- START KW: BuiltIn.Wait Until Keyword Succeeds [ 10 sec | 1 sec | Open Mailbox | server=${IMAP_MAIL_SERVER} | user=${mail_box} | password=${password} | is_secure=${True} ]
+20161006 10:07:15.062 - INFO - +----- START KW: ImapLibrary.Open Mailbox [ server=${IMAP_MAIL_SERVER} | user=${mail_box} | password=${password} | is_secure=${True} ]
+20161006 10:07:15.967 - INFO - +----- END KW: ImapLibrary.Open Mailbox (905)
+20161006 10:07:15.968 - INFO - +---- END KW: BuiltIn.Wait Until Keyword Succeeds (908)
+20161006 10:07:15.969 - INFO - +---- START KW: ${latest} = ImapLibrary.Wait For Email [ poll_frequency=5 | status=UNSEEN | timeout=20 ]
+20161006 10:07:16.351 - INFO - ${latest} = 19
+20161006 10:07:16.351 - INFO - +---- END KW: ${latest} = ImapLibrary.Wait For Email (382)
+20161006 10:07:16.351 - INFO - ${latest} = 19
+20161006 10:07:16.351 - INFO - +--- END KW: ${latest} = mail_keywords.Get Last Unread Email Message (1295)
+20161006 10:07:16.352 - INFO - +--- START KW: ${match} = ImapLibrary.Get Matches From Email [ ${latest} | ${text} ]
+20161006 10:07:16.747 - INFO - ${match} = ['Yulia Eryomina!', 'Yulia Eryomina!']
+20161006 10:07:16.747 - INFO - +--- END KW: ${match} = ImapLibrary.Get Matches From Email (396)
+20161006 10:07:16.748 - INFO - +--- START KW: BuiltIn.Should Not Be Empty [ ${match} ]
+20161006 10:07:16.748 - INFO - Length is 2
+20161006 10:07:16.749 - INFO - +--- END KW: BuiltIn.Should Not Be Empty (1)
+20161006 10:07:16.750 - INFO - +-- END KW: mail_keywords.Verify Last Unread Email Message Text (1697)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20161006 10:07:16.751 - INFO - +-- START TEARDOWN: Selenium2Library.Close All Browsers [ ]
+20161006 10:07:16.752 - DEBUG - Closing all browsers
+20161006 10:07:20.124 - INFO - +-- END TEARDOWN: Selenium2Library.Close All Browsers (3372)
+------------------------------------------------------------------------------
+20161006 10:07:20.137 - INFO - +- END TEST: Sucessful\Registration Message (29350)
+------------------------------------------------------------------------------
+20161006 10:07:20.154 - INFO - + END SUITE: Registration (29562)
+==============================================================================

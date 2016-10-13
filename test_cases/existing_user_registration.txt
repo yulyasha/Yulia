@@ -1,0 +1,18 @@
+***Settings***
+Documentation  This file represents Registration on our web-site
+Resource  ../config.txt
+Test Setup  Preconditions  
+Test Teardown  Close All Browsers
+***Keywords***
+Preconditions  
+  Open Browser for iCompare  ${HOME_URL}  ${BROWSER}
+***Test Case***
+Sucessful\Registration Message
+  Click Login Button on Main Page
+  Click Sign Up Link on Login Page
+  Input Email on Registration Page  qwerty@mail.ru
+  Input Password on Registration Page  qwerty
+  Input Confirm Password on Registration Page  qwerty
+  Click Create Account on Registration Page
+  #Verify User Logged In on Header Page
+  Verify Error Message

@@ -1,0 +1,7 @@
+***Settings***
+Resource  ../libs.txt
+
+
+***Keywords***
+Connect to mySQL
+  Connect To Database Using Custom Params  pymysql  db='${db_name}', user='${db_user}', host='${db_host}', port=${db_port}

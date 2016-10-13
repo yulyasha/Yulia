@@ -1,0 +1,13 @@
+***Settings***
+Resource  ../libs.txt
+
+***Variables***
+${prp_inpt_email}  xpath=//input[@id='id_email']
+${prp_send_btn}  xpath=//input[@class='btn btn--primary login-form__btn']
+
+***Keywords***
+Input Email On Pwd Recovery Page
+  [Arguments]  ${text}
+  Input Text  ${prp_inpt_email}  ${text}
+Click Send Button On Password Recovery Page
+  Click Element  ${prp_send_btn}

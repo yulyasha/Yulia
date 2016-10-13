@@ -1,0 +1,62 @@
+***Settings***
+Resource  ../libs.txt
+
+***Variables***
+
+${rp_inpt_first_name}  xpath=.//*[@id='id_first_name']
+${rp_inpt_last_name}  xpath=.//*[@id='id_last_name']
+${rp_inpt_email}  xpath=.//*[@id='id_email']
+${rp_inpt_email_rpt}  xpath=.//*[@id='id_email2']
+${rp_inpt_copmany}  xpath=.//*[@id='id_company']
+${rp_inpt_department}  xpath=.//*[@id='id_department']
+${rp_inpt_pwd}  xpath=.//*[@id='id_password1']
+${rp_inpt_pwd_rp}  xpath=.//*[@id='id_password2']
+${rp_terms_and_cond}  xpath=//input[@id='id_terms']/..
+${rp_submit}  xpath=.//*[@id='btn_go_signup']  
+
+***Keywords***
+
+Select Salutation On Registration Page
+  [Documentation]  Selects Mr, Mrs
+  [Arguments]  ${title}
+  Select From List By Label  id=id_title  ${title}
+
+Input First Name On Registration Page
+  [Arguments]  ${text}
+  Input Text  ${rp_inpt_first_name}  ${text}
+  
+Input Last Name On Registration Page
+  [Arguments]  ${text}
+  Input Text  ${rp_inpt_last_name}  ${text}
+  
+Input Email On Registration Page
+  [Arguments]  ${text}
+  Input Text  ${rp_inpt_email}  ${text}
+  
+Input Email Repeat On Registration Page
+  [Arguments]  ${text}
+  Input Text  ${rp_inpt_email_rpt}  ${text}
+  
+Input Company On Registration Page
+  [Arguments]  ${text}
+  Input Text  ${rp_inpt_copmany}  ${text}
+   
+Input Department On Registration Page
+  [Arguments]  ${text}
+  Input Text  ${rp_inpt_department}  ${text}
+  
+Input Password On Registration Page
+  [Arguments]  ${text}
+  Input Text  ${rp_inpt_pwd}  ${text}
+  
+Input Confirm Password On Registration Page
+  [Arguments]  ${text}
+  Input Text  ${rp_inpt_pwd_rp}  ${text}
+  
+Select Confirm Checkbox
+  Click Element  ${rp_terms_and_cond}
+  
+Click Submit On Registration Page
+  Click Element  ${rp_submit}
+  
+
