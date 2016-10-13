@@ -10,7 +10,7 @@ Preconditions
 Sucessful\Registration Message
   Click Login Button on Main Page
   Click Sign Up Link on Login Page
-  Input Email on Registration Page  qwerty@mail.ru
+  Input Email on Registration Page  julia.eryomina@gmail.com
   Input Password on Registration Page  qwerty
   Input Confirm Password on Registration Page  qwerty
   Click Create Account on Registration Page
