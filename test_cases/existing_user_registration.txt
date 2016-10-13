@@ -11,8 +11,8 @@ Sucessful\Registration Message
   Click Login Button on Main Page
   Click Sign Up Link on Login Page
   Input Email on Registration Page  julia.eryomina@gmail.com
-  Input Password on Registration Page  123456789
-  Input Confirm Password on Registration Page  123456789
+  Input Password on Registration Page  1234567
+  Input Confirm Password on Registration Page  1234567
   Click Create Account on Registration Page
   #Verify User Logged In on Header Page
   Verify Error Message
