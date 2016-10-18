@@ -15,7 +15,7 @@ Preconditions
 Sucessful\Registration Message
   Click Sign Up Button On Header Page
   Select Salutation On Registration Page  Mrs
-  Input First Name On Registration Page  Yulia
+  Input First Name On Registration Page  Yulya
   Input Last Name On Registration Page  Eryomina
   Input Email On Registration Page  scaletoolstest+${NUMBER}@gmail.com
   Input Email Repeat On Registration Page  scaletoolstest+${NUMBER}@gmail.com
